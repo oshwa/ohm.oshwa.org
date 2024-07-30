@@ -1,0 +1,18 @@
+{
+  "name": "ohm.oshwa.org",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "//": "This weird invocation of eleventy is due to https://github.com/11ty/eleventy/issues/3353",
+    "build": "tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts",
+    "serve": "tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "CC-BY-SA 4.0",
+  "dependencies": {
+    "@11ty/eleventy": "3.0.0-alpha.17",
+    "tsx": "^4.16.2"
+  }
+}
