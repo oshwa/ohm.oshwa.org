@@ -1,0 +1,33 @@
+/* Common CSS for OSHWA microsites */
+
+@import "./bulma.min.css";
+@import "../fonts/roboto-condensed/roboto-condensed.css";
+@import "../fonts/crimson-pro/crimson-pro.css";
+
+:root {
+    --oshwa-family-display: "Roboto Condensed", SF Pro,Segoe UI,Roboto,Oxygen,Ubuntu,Helvetica Neue,Helvetica,Arial,sans-serif;
+    --oshwa-family-text: "Crimson Pro", SF Pro,Segoe UI,Roboto,Oxygen,Ubuntu,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+/* Bulma customizations */
+:root {
+    --bulma-body-size: 18px;
+    --bulma-family-primary: "Crimson Pro", SF Pro,Segoe UI,Roboto,Oxygen,Ubuntu,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.content h1, h2, h3, h4, h5, h6 {
+    font-family: var(--oshwa-family-display);
+}
+
+.navbar {
+    font-family: var(--oshwa-family-display);
+    font-weight: bold;
+}
+
+.navbar-brand .navbar-item img {
+    --bulma-navbar-item-img-max-height: 12lh;
+}
+
+.navbar-end {
+    align-items: center;
+}
