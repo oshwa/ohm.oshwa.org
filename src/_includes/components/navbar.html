@@ -13,21 +13,11 @@
 
   <div id="navbarMenu" class="navbar-menu">
     <div class="navbar-end">
-      <a class="navbar-item">
-        Planning an Event
+      {% for item in nav.items %}
+      <a class="navbar-item {% if item.url == page.url %}is-active{% endif %}" href="{{item.url}}">
+        {{item.title}}
       </a>
-      <a class="navbar-item">
-        Dos & Don'ts
-      </a>
-      <a class="navbar-item">
-        Resources
-      </a>
-      <a class="navbar-item">
-        Certification
-      </a>
-      <a class="navbar-item">
-        Events
-      </a>
+      {% endfor %}
     </div>
   </div>
 </nav>
