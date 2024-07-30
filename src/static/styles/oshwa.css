@@ -11,6 +11,15 @@
         sans-serif;
 }
 
+.is-family-text {
+    font-family: var(--oshwa-family-text);
+}
+
+.is-family-display {
+    font-family: var(--oshwa-family-display);
+    font-weight: bold;
+}
+
 /* Bulma customizations */
 :root {
     --bulma-body-size: 18px;
