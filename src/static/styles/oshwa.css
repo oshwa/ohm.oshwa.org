@@ -52,3 +52,11 @@ h6 {
 .footer {
     --bulma-footer-background-color: transparent;
 }
+
+/* OHM-specific bits */
+
+@media screen and (max-width: 1024px) {
+    .navbar-brand .navbar-item img {
+        --bulma-navbar-item-img-max-height: 6lh;
+    }
+}
