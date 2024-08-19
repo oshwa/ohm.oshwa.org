@@ -23,8 +23,7 @@
 /* Bulma customizations */
 :root {
     --bulma-body-size: 18px;
-    --bulma-family-primary: "Crimson Pro", SF Pro, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial,
-        sans-serif;
+    --bulma-family-primary: var(--oshwa-family-text);
 }
 
 .content h1,
@@ -41,10 +40,6 @@ h6 {
     font-weight: bold;
 }
 
-.navbar-brand .navbar-item img {
-    --bulma-navbar-item-img-max-height: 12lh;
-}
-
 .navbar-end {
     align-items: center;
 }
@@ -53,10 +48,35 @@ h6 {
     --bulma-footer-background-color: transparent;
 }
 
-/* OHM-specific bits */
+/* Navbar tweaks */
 
-@media screen and (max-width: 1024px) {
+.navbar-brand .navbar-item img {
+    --bulma-navbar-item-img-max-height: 12lh;
+}
+
+@media screen and (max-width: 1023px) {
     .navbar-brand .navbar-item img {
         --bulma-navbar-item-img-max-height: 6lh;
+    }
+
+    .navbar-menu {
+        position: absolute;
+        width: 100%;
+        margin-block-start: 1rem;
+        contain: paint;
+        padding-block: 0;
+        border: 0.1rem solid black;
+        border-radius: var(--bulma-radius);
+        display: block;
+        opacity: 0;
+        transform-origin: top center;
+        transform: scaleY(0);
+        transition-property: opacity, transform;
+        transition-duration: 0.2s;
+    }
+
+    .navbar-menu.is-active {
+        transform: scaleY(1);
+        opacity: 1;
     }
 }
