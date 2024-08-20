@@ -39,6 +39,22 @@
 :root {
     --bulma-body-size: 18px;
     --bulma-family-primary: var(--oshwa-family-text);
+
+    --bulma-primary-h: 169deg;
+    --bulma-primary-s: 45%;
+    --bulma-primary-l: 54%;
+    --bulma-link-h: 196deg;
+    --bulma-link-s: 82%;
+    --bulma-link-l: 49%;
+    --bulma-info-h: 277deg;
+    --bulma-info-s: 30%;
+    --bulma-info-l: 50%;
+    --bulma-warning-h: 36deg;
+    --bulma-warning-s: 96%;
+    --bulma-warning-l: 62%;
+    --bulma-danger-h: 4deg;
+    --bulma-danger-s: 85%;
+    --bulma-danger-l: 61%;
 }
 
 .content h1,
