@@ -9,6 +9,21 @@
         Arial, sans-serif;
     --oshwa-family-text: "Roboto", SF Pro, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial,
         sans-serif;
+
+    --oshwa-black: #000000;
+    --oshwa-white: #ffffff;
+    --oshwa-teal: #56bfab;
+    --oshwa-cyan: #16ace3;
+    --oshwa-purple: #8859a5;
+    --oshwa-red: #f05348;
+    --oshwa-orange: #fbb040;
+    --oshwa-yellow: #fde981;
+    --oshwa-dark-blue: #282747;
+    --oshwa-blue: #2b3990;
+    --oshwa-pcb: #1b874a;
+    --oshwa-monkey-barf-green: #d7df23;
+    --oshwa-magenta: #e64c9b;
+    --oshwa-coral: #f26d7a;
 }
 
 .is-family-text {
