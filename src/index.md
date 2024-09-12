@@ -10,7 +10,7 @@ October is Open Hardware Month! Join us at [OSHWA] by [certifying hardware][cert
 We are providing resources and asking the community to host small, local events (if it’s safe) in the name of open source hardware.  We ask that you have followed OSHWA’s rules listed on the ["Dos and Don'ts" page][dos-and-donts].
 
 <div class="is-flex is-justify-content-center my-6">
-    <a class="button is-link is-rounded is-large" href="/get-involved">Get involved</a>
+    <a class="button is-link is-rounded is-large" href="https://forms.gle/ZRHKpKRVTArzETZm7">Get involved</a>
 </div>
 
 [OSHWA]: https://oshwa.org
@@ -25,7 +25,12 @@ The Open Source Hardware Association (OSHWA) aims to foster technological knowle
 
 ## Open Hardware Summit
 
-Document your project in October, then join us for the Open Hardware Summit in Montreal in 2024!
+Document your project in October, then join us for the Open Hardware Summit in Edinburg in 2025!
+
+<div class="is-flex is-justify-content-center my-6">
+    <a class="button is-link is-rounded is-large" href="https://2025.oshwa.org">Open Hardware Summit</a>
+</div>
+
 [Sign up for our newsletter][newsletter] to receive forthcoming details.
 
 [newsletter]: https://oshwa.us19.list-manage.com/subscribe?u=3e1619d377d5a6c361ef3292b&id=ca147d8610
