@@ -26,11 +26,10 @@ export default function (eleventyConfig: any) {
         return collectionApi
             .getFilteredByTag("events")
             .sort((a: any, b: any) => {
-                const aDate = dayjs(a.start, eventDateFormat);
-                const bDate = dayjs(b.start, eventDateFormat);
+                const aDate = dayjs.tz(a.data.start, eventDateFormat, a.data.timezone);
+                const bDate = dayjs.tz(b.data.start, eventDateFormat, b.data.timezone);
                 return bDate.unix() - aDate.unix();
-            })
-            .reverse();
+            });
     });
 
     eleventyConfig.addFilter("formatDate", (date: Date, template: string, timezone: string = "America/New_York") => {
@@ -43,7 +42,36 @@ export default function (eleventyConfig: any) {
         const startDate = dayjs.tz(start, eventDateFormat, timezone);
         const endDate = dayjs.tz(end, eventDateFormat, timezone);
 
-        return `${startDate.format("MMMM D, YYYY")} @ ${startDate.format("h:mm A")} - ${endDate.format("h:mm A z")}`;
+
+        // Single day events are formatted as:
+        // October 2, 2024 @ 8:00 AM - 10:00 PM PDT
+        if(startDate.isSame(endDate, "day")) {
+            const startDateFormatted = `${startDate.format("MMMM D, YYYY")} @ ${startDate.format("h:mm A")}`;
+            const endTimeFormatted = `${endDate.format("h:mm A z")}`;
+            return `${startDateFormatted} - ${endTimeFormatted}`;
+        }
+
+        // Multi-day events are formatted as:
+        // October 2-4, 2024 PDT
+        // October 2 - November 12, 2024 PDT
+        // This doesn't account for different years.
+
+        if(startDate.isSame(endDate, "month")) {
+            const monthName = startDate.format("MMMM");
+            const startDay = startDate.format("D");
+            const endDay = endDate.format("D");
+            const year = startDate.format("YYYY");
+            const tz = startDate.format("z");
+            return `${monthName} ${startDay} - ${endDay}, ${year} ${tz}`;
+        }
+
+        if(startDate.isSame(endDate, "year")) {
+            const startFormatted = startDate.format("MMMM D");
+            const endFormatted = endDate.format("MMMM D, YYYY z");
+            return `${startFormatted} - ${endFormatted}`;
+        }
+
+        return `${startDate} - ${endDate}`
     });
 
     eleventyConfig.addShortcode(
