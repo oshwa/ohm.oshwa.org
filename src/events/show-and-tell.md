@@ -2,7 +2,7 @@
 layout: layouts/event.html
 title: "Show & Tell: 24hr Membership Drive"
 start: 2024-10-2 8:00 AM
-end: 2023-10-3 8:00 AM
+end: 2024-10-3 8:00 AM
 timezone: America/Los_Angeles
 organizer: OSHWA
 location: Online
